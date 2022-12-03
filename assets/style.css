@@ -1,0 +1,11 @@
+body{
+    background-color: green;
+}
+
+.ocultar{
+    display: none;
+}
+#lista ul {
+    display: flex;
+    justify-content: space-between;
+}
