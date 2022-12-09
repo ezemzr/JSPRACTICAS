@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "nombre": "Marco",
+        "empresa": "Coca Cola",
+        "puesto": "Desarrollador Javascript"
+    },
+    {
+        "id":1000,
+        "nombre": "Damian",
+        "empresa": "Coca Cola",
+        "puesto": "Desarrollador JAVA"
+    },
+    {
+        "id":40,
+        "nombre": "Diego",
+        "empresa": "Pepsi",
+        "puesto": "Desarrollador .NET"
+    }
+]

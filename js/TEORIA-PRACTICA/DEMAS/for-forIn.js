@@ -1,3 +1,6 @@
+//for of es para arrays y for in para objetos
+
+
 function Mascota(nombre,animal,color,sexy){
     this.nombre = nombre;
     this.animal = animal;
