@@ -1,6 +1,5 @@
 //Es una funcion que permite realizar acciones asincronicamente 
 //Necesita una callback(funcion como parametro) y unos segundos pasados en miles
-
 setTimeout(()=> {
     console.log("Proceso asincrónico")
 }, 3000)

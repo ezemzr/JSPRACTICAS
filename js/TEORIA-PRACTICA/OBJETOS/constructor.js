@@ -1,4 +1,4 @@
-
+//el constructor de un objeto es una función que usamos para crear un nuevo objeto cada vez que sea necesario
 
 function SuperHeroe(nombre, alterego, planeta, poder){
     this.nombre = nombre;
@@ -15,6 +15,7 @@ let superHeroe3 = new SuperHeroe("Bruno Diaz","Batman","Ciudad Gotica","Dinero")
 document.write(superHeroe2.nombre);
 document.write(superHeroe3["planeta"]);
 
+//ejemplo 2
 
 function Mascota(nombre,animal,color,sexy){
     this.nombre = nombre;

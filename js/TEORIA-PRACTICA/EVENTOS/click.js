@@ -1,12 +1,9 @@
 let gritar = () => {
     alert("ESTOY GRITANDO")
 }
-
 let basado = () =>{
     alert("las mujeres a la cocina")
 }
-
-
 // CON DOCUMENT.GETELEMENTBY ID-CLASSNAME-TAG
 
 let btn = document.getElementById("btn")
