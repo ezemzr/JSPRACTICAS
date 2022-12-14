@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .cold{
+            color: cornflowerblue;
+        }
+        .warm{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maquina del clima</h1>
+    <label for="ciudad">Nombre de Ciudad</label>
+    <input type="text" id="ciudad">
+    <button id="btnClima">Obtener Clima</button>
+
+    <output>
+        <p id="temperatura"></p>
+    </output> 
+
+    <script>
+
+
+        const btn = document.querySelector('#btnClima')
+        console.dir(btn);
+
+        btn.addEventListener("click",()=>{
+            let key = "caac0162155120dd63ef25a13c4b29a7"
+
+            let ciudad = document.querySelector('#ciudad').value
+            ciudad = encodeURIComponent(ciudad)
+            console.log(ciudad);
+
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${key}&units=metrics`
+            console.log(url);
+        
+            if(ciudad != ""){
+                fetch(url)  
+                .then(res =>{
+                    return res.json()
+                })
+                .then(clima =>{
+                    console.log(clima);
+                    let temp = clima.main.temp
+                    let tempc = temp -273.15
+                    let html = document.querySelector('#temperatura')
+                    html.innerHTML = tempc.toFixed(1)
+
+                    if(tempc < 10){
+                        html.className="cold"
+                    }else{
+                        html.className="warm"
+                    }
+                })
+                .catch(err => console.log(err))
+            }else{
+                alert("Tenes que poner una ciudad nabo")
+            }
+        })
+
+
+
+
+
+
+    </script>
+</body>
+</html>
